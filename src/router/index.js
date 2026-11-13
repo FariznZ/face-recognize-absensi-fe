@@ -3,7 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    redirect: '/login',
+    name: 'splash',
+    component: () => import('@/views/SplashView.vue'),
+    meta: { title: 'AgroPresence — PTPN I' },
   },
   {
     path: '/login',
